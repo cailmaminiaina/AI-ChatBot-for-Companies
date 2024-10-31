@@ -81,7 +81,7 @@ This project is an AI chatbot designed to enhance customer service for companies
 
 . Add Company Info: Include details in **info_bot.txt**.
 
-. Environment Variables: Add PAGE_ACCESS_TOKEN and API_KEY in the **.env** file.
+. Environment Variables: Add PAGE_ACCESS_TOKEN, VERIF_TOKEN and API_KEY in the **.env** file.
 
 ### **Run the Application**
 
