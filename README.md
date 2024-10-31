@@ -21,8 +21,8 @@ This project is an AI chatbot designed to enhance customer service for companies
 
 ## **🚀 Getting Started**
 
-[![Facebook](https://img.shields.io/badge/Facebook-blue?style=for-the-badge)](https://facebook.com/)
-[![Messenger](https://img.shields.io/badge/Messenger-purple?style=for-the-badge)](https://messenger.com/)
+[![Facebook](https://img.shields.io/badge/Facebook-blue?style=for-the-badge)]((https://developers.facebook.com/))
+[![Messenger](https://img.shields.io/badge/Messenger-purple?style=for-the-badge)](https://developers.facebook.com/docs/messenger-platform/getting-started/app-setup)
 
 ### **Facebook App Creation**
 
