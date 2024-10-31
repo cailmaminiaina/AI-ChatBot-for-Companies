@@ -15,7 +15,7 @@ This project is an AI chatbot designed to enhance customer service for companies
 
 **Customizable**: Easily add your company's information to info_bot.txt.
 
-**Environment Variable**: Configure your PAGE ACCESS TOKEN and API KEY in the .env file.
+**Environment Variable**: Configure your PAGE ACCESS TOKEN and API KEY in the **.env** file.
 
 
 ## **🚀 Getting Started**
@@ -42,7 +42,7 @@ This project is an AI chatbot designed to enhance customer service for companies
 
   . In the **Add a Product** section, select **Messenger** and click **Set Up**.
   
-  . In the **Messenger setting**s, generate a **Page Access Token** by connecting a Facebook Page and add **Webhooks Subscription** (**messages** and **messaging_pstbacks**).
+  . In the **Messenger setting**s, generate a **Page Access Token** by connecting a Facebook Page and add **Subscription** (**messages** and **messaging_pstbacks**).
   
   . Copy the **PAGE_ACCESS_TOKEN** for later use in the .env file.
 
@@ -51,9 +51,9 @@ This project is an AI chatbot designed to enhance customer service for companies
 
   . Under **Webhooks**, click **Add Callback URL**.
   
-  . Use **https://YOUR_NGROK_URL/** as the callback URL (replace YOUR_NGROK_URL with your actual ngrok URL).
+  . Use https://YOUR_NGROK_URL/ as the callback URL (replace YOUR_NGROK_URL with your actual ngrok URL).
   
-  . Set a **Verify Token** (any secure token of your choice) and add it to your .env file.
+  . Set a **Verify Token** (any secure token of your choice) and add it to your **.env** file.
   
   . Subscribe to the required fields (e.g., **messages**, **messaging_postbacks**).
 
@@ -78,7 +78,7 @@ This project is an AI chatbot designed to enhance customer service for companies
 ### **Environment Setup**
 
 . Add Company Info: Include details in **info_bot.txt**.
-. Environment Variables: Add PAGE_ACCESS_TOKEN and API_KEY in the .env file.
+. Environment Variables: Add PAGE_ACCESS_TOKEN and API_KEY in the **.env** file.
 
 ### **Run the Application**
 
