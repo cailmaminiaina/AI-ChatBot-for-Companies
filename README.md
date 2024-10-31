@@ -72,12 +72,14 @@ This project is an AI chatbot designed to enhance customer service for companies
     
 ### **Get API KEY**
 
-. Joining our [Discord server](https://discord.pawan.krd).
-. Obtaining an API key from the `#Bot` channel with the `/key` command.
+. Join our [Discord server](https://discord.pawan.krd).
+
+. Obtain an API key from the `#Bot` channel with the `/key` command.
    
 ### **Environment Setup**
 
 . Add Company Info: Include details in **info_bot.txt**.
+
 . Environment Variables: Add PAGE_ACCESS_TOKEN and API_KEY in the **.env** file.
 
 ### **Run the Application**
