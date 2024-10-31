@@ -48,7 +48,7 @@ This project is an AI chatbot designed to enhance customer service for companies
   . Copy the **PAGE_ACCESS_TOKEN** for later use in the .env file.
 
 **4. Webhook Setup:**
-**(Do this after running the Ampalibe App and the ngrok)**
+**(Do this after running the Ampalibe App and Ngrok)**
 
   . Under **Webhooks**, click **Add Callback URL**.
   
@@ -103,6 +103,7 @@ This project is an AI chatbot designed to enhance customer service for companies
 ### **Testing Locally**
 
 Use ngrok to expose the local server for testing.
+
 . Download and set up ngrok [here](https://ngrok.com/) and run:
 
     ngrok http 4555
