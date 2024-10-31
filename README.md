@@ -89,7 +89,7 @@ This project is an AI chatbot designed to enhance customer service for companies
 Use ngrok to expose the local server for testing.
 -Download and set up ngrok [here](https://ngrok.com/) and run:
 
-    grok http 4500
+    ngrok http 4500
     
 Use **https://YOUR_NGROK_URL/** as the callback URL for the **Webhooks** (replace YOUR_NGROK_URL with your actual ngrok URL).
 
