@@ -14,7 +14,7 @@ This project is an AI chatbot designed to enhance customer service for companies
 
 **Web Scraping**: Uses OpenAI's unofficial API for improved accuracy in responses (by Pawn).
 
-**Customizable**: Easily add your company's information to info_bot.txt.
+**Customizable**: Easily add your company's informations to info_bot.txt.
 
 **Environment Variable**: Configure your PAGE ACCESS TOKEN and API KEY in the **.env** file.
 
