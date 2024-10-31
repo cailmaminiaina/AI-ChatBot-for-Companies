@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://github.com/cailmaminiaina/ChatBot-for-Companies/blob/main/assets/public/ampalibe.png" alt="Ampalibe" width="200"/>
+  <img src="https://github.com/cailmaminiaina/AI-ChatBot-for-Companies/blob/main/assets/public/ampalibe.png" alt="Ampalibe" width="200"/>
 </div>
 
 # **AI Chatbot Messenger for Company Customer Service**
@@ -26,21 +26,21 @@ This project is an AI chatbot designed to enhance customer service for companies
     Go to the .[Facebook Developer](https://developers.facebook.com/) and log in or create an account if you don’t have one.
     
 **2-Create a New App:**
-        Go to **My Apps** > **Create App**.
-        Choose the **Business** option, then click Next.
-        Fill in the required fields, then click Create **App ID**.
+        -Go to **My Apps** > **Create App**.
+        -Choose the **Business** option, then click Next.
+        -Fill in the required fields, then click Create **App ID**.
 
 **3-Set Up Messenger:**
-        In the **Add a Product** section, select **Messenger** and click **Set Up**.
-        In the **Messenger setting**s, generate a **Page Access Token** by connecting a Facebook Page and add **Webhooks Subscription** (**messages** and **messaging_pstbacks**).
-        Copy the **PAGE_ACCESS_TOKEN** for later use in the .env file.
+        -In the **Add a Product** section, select **Messenger** and click **Set Up**.
+        -In the **Messenger setting**s, generate a **Page Access Token** by connecting a Facebook Page and add **Webhooks Subscription** (**messages** and **messaging_pstbacks**).
+        -Copy the **PAGE_ACCESS_TOKEN** for later use in the .env file.
 
 **4-Webhook Setup:**
 **(Do this after running the Ampalibe App)**
-        Under **Webhooks**, click **Add Callback URL**.
-        Use **https://YOUR_NGROK_URL/** as the callback URL (replace YOUR_NGROK_URL with your actual ngrok URL).
-        Set a **Verify Token** (any secure token of your choice) and add it to your .env file.
-        Subscribe to the required fields (e.g., **messages**, **messaging_postbacks**).
+        -Under **Webhooks**, click **Add Callback URL**.
+        -Use **https://YOUR_NGROK_URL/** as the callback URL (replace YOUR_NGROK_URL with your actual ngrok URL).
+        -Set a **Verify Token** (any secure token of your choice) and add it to your .env file.
+        -Subscribe to the required fields (e.g., **messages**, **messaging_postbacks**).
 
 **5-App Review:** Submit for App Review to get permission to use the bot in production.
 
@@ -57,6 +57,11 @@ This project is an AI chatbot designed to enhance customer service for companies
 
 1. Joining our [Discord server](https://discord.pawan.krd).
 2. Obtaining an API key from the `#Bot` channel with the `/key` command.
+   
+**Environment Setup**
+
+1-Add Company Info: Include details in info_bot.txt.
+2-Environment Variables: Add PAGE_ACCESS_TOKEN and API_KEY in the .env file.
 
 **Run the Application**
 
@@ -65,14 +70,11 @@ This project is an AI chatbot designed to enhance customer service for companies
 **Testing Locally**
 
 Use ngrok to expose the local server for testing.
-Download and set up ngrok [here](https://ngrok.com/) and run:
+-Download and set up ngrok [here](https://ngrok.com/) and run:
 
     grok http 4500
-
-**Environment Setup**
-
-1-Add Company Info: Include details in info_bot.txt.
-2-Environment Variables: Add PAGE_ACCESS_TOKEN and API_KEY in the .env file.
+    
+-Use **https://YOUR_NGROK_URL/** as the callback URL for the **Webhooks** (replace YOUR_NGROK_URL with your actual ngrok URL).
 
 **💻 Developers and Contributors**
 
