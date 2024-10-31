@@ -12,7 +12,7 @@ This project is an AI chatbot designed to enhance customer service for companies
 
 ![Status](https://img.shields.io/badge/FEATURES-red?style=for-the-badge)
 
-**Web Scraping**: Uses OpenAI's unofficial API for improved accuracy in responses by Pawn.
+**Web Scraping**: Uses OpenAI's unofficial API for improved accuracy in responses (by Pawn).
 
 **Customizable**: Easily add your company's information to info_bot.txt.
 
