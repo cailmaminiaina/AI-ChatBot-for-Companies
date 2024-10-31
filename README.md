@@ -1,6 +1,6 @@
 <div align="center">
-  <img src="https://github.com/cailmaminiaina/AI-ChatBot-for-Companies/blob/main/assets/public/ampalibe.png" alt="Ampalibe" width="200"/>
-  <img src="https://github.com/cailmaminiaina/AI-ChatBot-for-Companies/blob/main/assets/public/ChatGPT-Logo.svg.png" alt="Openai's AI" width="200"/>
+  <img src="https://github.com/cailmaminiaina/AI-ChatBot-for-Companies/blob/main/assets/public/ampalibe.png" alt="Ampalibe" width="100"/>
+  <img src="https://github.com/cailmaminiaina/AI-ChatBot-for-Companies/blob/main/assets/public/ChatGPT-Logo.svg.png" alt="Openai's AI" width="100"/>
 </div>
 
 # **AI Chatbot Messenger for Company Customer Service**
