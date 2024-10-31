@@ -72,13 +72,13 @@ This project is an AI chatbot designed to enhance customer service for companies
     
 ### **Get API KEY**
 
-1. Joining our [Discord server](https://discord.pawan.krd).
-2. Obtaining an API key from the `#Bot` channel with the `/key` command.
+. Joining our [Discord server](https://discord.pawan.krd).
+. Obtaining an API key from the `#Bot` channel with the `/key` command.
    
 ### **Environment Setup**
 
-1. Add Company Info: Include details in info_bot.txt.
-2. Environment Variables: Add PAGE_ACCESS_TOKEN and API_KEY in the .env file.
+. Add Company Info: Include details in **info_bot.txt**.
+. Environment Variables: Add PAGE_ACCESS_TOKEN and API_KEY in the .env file.
 
 ### **Run the Application**
 
@@ -87,11 +87,11 @@ This project is an AI chatbot designed to enhance customer service for companies
 ### **Testing Locally**
 
 Use ngrok to expose the local server for testing.
--Download and set up ngrok [here](https://ngrok.com/) and run:
+. Download and set up ngrok [here](https://ngrok.com/) and run:
 
     ngrok http 4500
     
-Use **https://YOUR_NGROK_URL/** as the callback URL for the **Webhooks** (replace YOUR_NGROK_URL with your actual ngrok URL).
+. Use https://YOUR_NGROK_URL/ as the callback URL for the **Webhooks** (replace YOUR_NGROK_URL with your actual ngrok URL).
 
 ## **💻 Developers and Contributors**
 
@@ -101,7 +101,7 @@ Developed by: **CAIL MAMINIAINA**
 
 Contributor: **PAWN**
 
-**☕ Support the Project**
+## **☕ Support the Project**
 
 If you find this project useful, consider buying me a coffee!
 ![Status](https://img.shields.io/badge/M'Vola-darkgreen)
