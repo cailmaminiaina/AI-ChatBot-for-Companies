@@ -7,7 +7,7 @@
 
 ![Status](https://img.shields.io/badge/status-running-brightgreen?style=for-the-badge)
 
-This project is an AI chatbot designed to enhance customer service for companies on Messenger, using the Ampalibe framework. It integrates OpenAI's API to support interactions, provide answers, and offer helpful information to customers.
+This project is an AI chatbot designed to enhance customer service for companies on Messenger, using the Ampalibe framework. It integrates unofficial OpenAI's API (Open Source) to support interactions, provide answers, and offer helpful information to customers.
 
 
 ![Status](https://img.shields.io/badge/FEATURES-red?style=for-the-badge)
