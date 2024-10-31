@@ -65,7 +65,7 @@ This project is an AI chatbot designed to enhance customer service for companies
 ### **Installation**
 
 [![Install Ampalibe](https://img.shields.io/badge/Install-Ampalibe-blue?style=for-the-badge)](https://pypi.org/project/ampalibe/)
-[![Install OpenAI](https://img.shields.io/badge/Install-OpenAI-white?style=for-the-badge)]((https://pypi.org/project/openai/0.26.5/))
+[![Install OpenAI](https://img.shields.io/badge/OpenAI-white?style=for-the-badge)]((https://pypi.org/project/openai/0.26.5/))
 [![Run App](https://img.shields.io/badge/Run-App-brightgreen?style=for-the-badge)](#)
    
 **Install Ampalibe Framework**
