@@ -4,12 +4,12 @@
 
 # **AI Chatbot Messenger for Company Customer Service**
 
-![Status](https://img.shields.io/badge/status-running-brightgreen)
+![Status](https://img.shields.io/badge/status-running-brightgreen?style=for-the-badge)
 
 This project is an AI chatbot designed to enhance customer service for companies on Messenger, using the Ampalibe framework. It integrates OpenAI's API to support interactions, provide answers, and offer helpful information to customers.
 
 
-![Status](https://img.shields.io/badge/FEATURES-red)
+![Status](https://img.shields.io/badge/FEATURES-red?style=for-the-badge)
 
 **Web Scraping**: Uses OpenAI's unofficial API for improved accuracy in responses by Pawn.
 
@@ -20,8 +20,8 @@ This project is an AI chatbot designed to enhance customer service for companies
 
 ## **🚀 Getting Started**
 
-[![Facebook](https://img.shields.io/badge/Facebook-blue?style=for-the-badge)](https://pypi.org/project/ampalibe/)
-[![Messenger](https://img.shields.io/badge/Messenger-purple?style=for-the-badge)](#)
+[![Facebook](https://img.shields.io/badge/Facebook-blue?style=for-the-badge)](https://facebook.com/)
+[![Messenger](https://img.shields.io/badge/Messenger-purple?style=for-the-badge)](https://messenger.com/)
 
 **Facebook App Creation**
 
