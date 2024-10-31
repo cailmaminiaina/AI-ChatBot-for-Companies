@@ -1,1 +1,7 @@
-ADD THE COMPANY'S INFO HERE
+ADD THE ALL COMPANY'S INFONFORMATIONS HERE
+e.g:
+-about
+-services
+-contacts
+-location
+- etc
