@@ -28,7 +28,7 @@ This project is an AI chatbot designed to enhance customer service for companies
 
 **1. Create a Facebook Developer Account:**
 
-  . Go to the .[Facebook Developer](https://developers.facebook.com/) and log in or create an account if you don’t have one.
+  . Go to the [Facebook Developer](https://developers.facebook.com/) and log in or create an account if you don’t have one.
     
 **2. Create a New App:**
 
@@ -92,7 +92,7 @@ This project is an AI chatbot designed to enhance customer service for companies
 Use ngrok to expose the local server for testing.
 . Download and set up ngrok [here](https://ngrok.com/) and run:
 
-    ngrok http 4500
+    ngrok http 4555
     
 . Use https://YOUR_NGROK_URL/ as the callback URL for the **Webhooks** (replace YOUR_NGROK_URL with your actual ngrok URL).
 
