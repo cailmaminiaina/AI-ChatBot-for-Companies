@@ -20,6 +20,9 @@ This project is an AI chatbot designed to enhance customer service for companies
 
 ## **🚀 Getting Started**
 
+[![Facebook](https://img.shields.io/badge/Facebook-blue?style=for-the-badge)](https://pypi.org/project/ampalibe/)
+[![Messenger](https://img.shields.io/badge/Messenger-purple?style=for-the-badge)](#)
+
 **Facebook App Creation**
 
 **1-Create a Facebook Developer Account:**
@@ -30,21 +33,28 @@ This project is an AI chatbot designed to enhance customer service for companies
 
         
   -Go to **My Apps** > **Create App**.
+  
   -Choose the **Business** option, then click Next.
+  
   -Fill in the required fields, then click Create **App ID**.
 
 **3-Set Up Messenger:**
 
   -In the **Add a Product** section, select **Messenger** and click **Set Up**.
+  
   -In the **Messenger setting**s, generate a **Page Access Token** by connecting a Facebook Page and add **Webhooks Subscription** (**messages** and **messaging_pstbacks**).
+  
   -Copy the **PAGE_ACCESS_TOKEN** for later use in the .env file.
 
 **4-Webhook Setup:**
 **(Do this after running the Ampalibe App)**
 
   -Under **Webhooks**, click **Add Callback URL**.
+  
   -Use **https://YOUR_NGROK_URL/** as the callback URL (replace YOUR_NGROK_URL with your actual ngrok URL).
+  
   -Set a **Verify Token** (any secure token of your choice) and add it to your .env file.
+  
   -Subscribe to the required fields (e.g., **messages**, **messaging_postbacks**).
 
 **5-App Review:** Submit for App Review to get permission to use the bot in production.
