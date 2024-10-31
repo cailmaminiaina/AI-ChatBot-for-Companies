@@ -121,6 +121,7 @@ Contributor: **PAWN**
 ## **☕ Support the Project**
 
 If you find this project useful, consider buying me a coffee!
+
 ![Status](https://img.shields.io/badge/M'Vola-darkgreen)
 
     +261341820966
