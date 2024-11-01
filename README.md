@@ -82,7 +82,7 @@ This project is an AI chatbot designed to enhance customer service for companies
 
 **or**
 
-    pip install -r requirement.txt
+    pip install -r requirements.txt
      
 ### **Get API KEY**
 
