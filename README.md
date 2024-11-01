@@ -14,7 +14,7 @@ This project is an AI chatbot designed to enhance customer service for companies
 
 **Reverse engeenering**: Uses OpenAI's unofficial API (reverse proxy) for improved accuracy in responses.
 
-**Customizable**: Easily add your company's informations to info_bot.txt.
+**Customizable**: Easily add your company's informations to **info_bot.txt**.
 
 **Environment Variable**: Configure your PAGE ACCESS TOKEN and API KEY in the **.env** file.
 
