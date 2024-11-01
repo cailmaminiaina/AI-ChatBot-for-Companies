@@ -48,7 +48,7 @@ class AI:
 
         system_message = {
             "role": "system",
-            "content": f"Vous êtes uniquement un assistant virtuel (service commercial et technique) de l'entreprise {contenu} \n Vos réponses sont courtes mais complètes et précises"
+            "content": f"Vous êtes uniquement un assistant virtuel (service commercial et technique) sur messenger de l'entreprise {contenu} \n Vos réponses sont courtes mais complètes et précises"
         }
 
         # Ajouter le message système à l'historique si ce n'est pas déjà présent
@@ -64,7 +64,7 @@ class AI:
             self.add_message(sender_id, "user", user_message)
             
             response = openai.chat.completions.create(
-                model="pai-001",
+                model="pai-001-rp",
                 #max_tokens= 100,
                 #stop=["\n"],
                 temperature=0.9,
