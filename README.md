@@ -12,7 +12,7 @@ This project is an AI chatbot designed to enhance customer service for companies
 
 ![Status](https://img.shields.io/badge/FEATURES-red?style=for-the-badge)
 
-**Web Scraping**: Uses OpenAI's unofficial API for improved accuracy in responses (by Pawn).
+**Reverse engeenering**: Uses OpenAI's unofficial API for improved accuracy in responses (by Pawan).
 
 **Customizable**: Easily add your company's informations to info_bot.txt.
 
@@ -116,7 +116,7 @@ Developed by: **CAIL MAMINIAINA**
 
 [GitHub](https://github.com/maminiainalaic) | [Facebook](https://facebook.com/yvanecail.0)
 
-Contributor: **PAWN**
+Contributor: **PAWAN**
 
 ## **☕ Support the Project**
 
