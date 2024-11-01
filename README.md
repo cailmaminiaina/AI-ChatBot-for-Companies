@@ -104,7 +104,7 @@ This project is an AI chatbot designed to enhance customer service for companies
 
 Use ngrok to expose the local server for testing.
 
-. Download and set up ngrok [here](https://ngrok.com/) and run:
+. Download and set up ngrok [here](https://ngrok.com/) and run on another terminal:
 
     ngrok http 4555
     
