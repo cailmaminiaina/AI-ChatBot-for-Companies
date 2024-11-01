@@ -11,7 +11,8 @@ def main(sender_id, cmd, **ext):
     """
     Fonction principale qui gère chaque commande de l'utilisateur.
     """
-    before_process(sender_id, **ext)
+    chat.send_action(sender_id, Action.mark_seen)
+    chat.send_action(sender_id, Action.typing_on)
     try:
         # Obtenir la réponse de l'IA basée sur l'historique du sender_id
         chat_response = ai.get_chatgpt_response(sender_id, cmd)
@@ -24,13 +25,6 @@ def main(sender_id, cmd, **ext):
         chat.send_text(sender_id, f"Une erreur est survenue.")
         print(f"Une erreur est survenue : {str(e)}")
         
-@ampalibe.before_receive()
-def before_process(sender_id, **ext):
-    #  Mark as seen for each message received
-    chat.send_action(sender_id, Action.mark_seen)
-    chat.send_action(sender_id, Action.typing_on)
-    return True
-
 @ampalibe.command('/reset')
 def reset_conversation(sender_id, **ext):
     """
