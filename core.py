@@ -1,5 +1,6 @@
 import ampalibe
 from ampalibe import Messenger
+from ampalibe.messenger import Action
 from AI import AI
 
 chat = Messenger()
@@ -21,6 +22,13 @@ def main(sender_id, cmd, **ext):
         # En cas d'erreur, notifier l'utilisateur
         chat.send_text(sender_id, f"Une erreur est survenue.")
         print(f"Une erreur est survenue : {str(e)}")
+        
+@ampalibe.before_receive()
+def before_process(sender_id, lang, **ext):
+    #  Mark as seen for each message received
+    chat.send_action(sender_id, Action.mark_seen)
+    chat.send_action(sender_id, Action.typing_on)
+    return True
 
 @ampalibe.command('/reset')
 def reset_conversation(sender_id, **ext):
