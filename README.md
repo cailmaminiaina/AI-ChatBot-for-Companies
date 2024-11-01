@@ -12,7 +12,7 @@ This project is an AI chatbot designed to enhance customer service for companies
 
 ![Status](https://img.shields.io/badge/FEATURES-red?style=for-the-badge)
 
-**Reverse engeenering**: Uses OpenAI's unofficial API for improved accuracy in responses (by Pawan).
+**Reverse engeenering**: Uses OpenAI's unofficial API for improved accuracy in responses.
 
 **Customizable**: Easily add your company's informations to info_bot.txt.
 
@@ -112,11 +112,11 @@ Use ngrok to expose the local server for testing.
 
 ## **💻 Developers and Contributors**
 
-Developed by: **CAIL MAMINIAINA**
+Developed by: **Cail Maminiiana**
 
 [GitHub](https://github.com/maminiainalaic) | [Facebook](https://facebook.com/yvanecail.0)
 
-Contributor: **PAWAN**
+Contributor: **Pawan Osman**
 
 ## **☕ Support the Project**
 
