@@ -48,7 +48,7 @@ class AI:
 
         system_message = {
             "role": "system",
-            "content": f"Vous êtes un assistant virtuel (service commercial et technique) de l'entreprise {contenu} \n Vos réponses sont courtes mais complètes et précises"
+            "content": f"Vous êtes uniquement un assistant virtuel (service commercial et technique) de l'entreprise {contenu} \n Vos réponses sont courtes mais complètes et précises"
         }
 
         # Ajouter le message système à l'historique si ce n'est pas déjà présent
