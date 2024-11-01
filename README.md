@@ -37,7 +37,7 @@ This project is an AI chatbot designed to enhance customer service for companies
   
   . Choose the **Business** option, then click Next.
   
-  . Fill in the required fields, then click Create **App ID**.
+  . Fill in the required fields, then click **Create App ID**.
 
 **3. Set Up Messenger:**
 
