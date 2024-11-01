@@ -68,7 +68,7 @@ This project is an AI chatbot designed to enhance customer service for companies
 [![Install OpenAI](https://img.shields.io/badge/OpenAI-white?style=for-the-badge)](https://pypi.org/project/openai/)
 [![Run App](https://img.shields.io/badge/Run-App-brightgreen?style=for-the-badge)](#)
 
-**Clone this repository**
+**Fork or Clone this repository**
 
     git clone https://github.com/cailmaminiaina/AI-ChatBot-for-Companies.git && cd AI-ChatBot-for-Companies
     
