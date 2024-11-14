@@ -122,6 +122,6 @@ Contributor: **Pawan Osman**
 
 If you find this project useful, consider buying me a coffee!
 
-![Status](https://img.shields.io/badge/M'Vola-darkgreen)
+![Status](https://img.shields.io/badge/TaptapSend-darkgreen)
 
     +261341820966
