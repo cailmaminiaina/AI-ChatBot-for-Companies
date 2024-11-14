@@ -69,6 +69,7 @@ def main(sender_id, cmd, **ext):
         # Vérifier si l'utilisateur est en conversation avec l'admin
         cursor.execute("SELECT in_conversation_with_admin FROM help_requests WHERE sender_id = ?", (sender_id,))
         result = cursor.fetchone()
+        print (result)
         
         if result and result[0] == 1:
             #user_info = chat.get_user_profile(sender_id)
