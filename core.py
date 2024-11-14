@@ -93,14 +93,14 @@ def main(sender_id, cmd, **ext):
 
         # Menu persistant pour basculer entre "Personne Réelle" et "Assistant Virtuel"
         persistent_menu = [
-            Button(type=Type.postback, title='📦 Faire une commande', payload=Payload('/commande')),
-            Button(type=Type.postback, title='👤 Personne Réelle', payload=Payload('/reelle')),
+            Button(type=Type.postback, title='📦 Faire une commande', payload=Payload('/command')),
+            Button(type=Type.postback, title='👤 Personne Réelle', payload=Payload('/real')),
             Button(type=Type.postback, title='🤖 Assistant Virtuel IA', payload=Payload('/leave_admin')),
         ]
         chat.persistent_menu(sender_id, persistent_menu)
 
 '''
-@ampalibe.command('/reelle')
+@ampalibe.command('/real')
 def send_pers(sender_id, **ext):
     cursor.execute("INSERT OR IGNORE INTO help_requests (sender_id, in_conversation_with_admin) VALUES (?, 0)", (sender_id,))
     conn.commit()
@@ -119,8 +119,8 @@ def send_pers(sender_id, **ext):
     
     chat.send_generic_template(sender_id, list_items, next=True)
 '''
-@ampalibe.command('/reelle')
-def send_laic(sender_id, **ext):
+@ampalibe.command('/real')
+def send_real(sender_id, **ext):
     cursor.execute("UPDATE help_requests SET in_conversation_with_admin = 1 WHERE sender_id = ?", (sender_id,))
     conn.commit()
 
@@ -134,7 +134,7 @@ def send_laic(sender_id, **ext):
     chat.send_text(admin_id, f"Cet utilisateur veut vous parler.")
     chat.send_text(admin_id, sender_id)
 
-@ampalibe.command('/commande')
+@ampalibe.command('/command')
 def commande(sender_id, **ext):
     time.sleep(10)
     cursor.execute("UPDATE help_requests SET in_conversation_with_admin = 1 WHERE sender_id = ?", (sender_id,))
