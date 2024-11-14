@@ -16,7 +16,7 @@ This project is an AI chatbot designed to enhance customer service for companies
 
 **Customizable**: Easily add your company's informations to **info_bot.txt**.
 
-**Environment Variable**: Configure your PAGE ACCESS TOKEN and API KEY in the **.env** file.
+**Environment Variable**: Configure your PAGE ACCESS TOKEN, API KEY and ADMIN_ID (messenger id of the chat responsable) in the **.env** file.
 
 
 ## **🚀 Getting Started**
