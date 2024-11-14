@@ -119,6 +119,8 @@ def send_pers(sender_id, **ext):
 '''
 @ampalibe.command('/real')
 def send_real(sender_id, **ext):
+    cursor.execute("INSERT OR IGNORE INTO help_requests (sender_id, in_conversation_with_admin) VALUES (?, 0)", (sender_id,))
+    conn.commit()
     cursor.execute("UPDATE help_requests SET in_conversation_with_admin = 1 WHERE sender_id = ?", (sender_id,))
     conn.commit()
 
@@ -134,10 +136,11 @@ def send_real(sender_id, **ext):
 
 @ampalibe.command('/command')
 def commande(sender_id, **ext):
-    time.sleep(10)
+    cursor.execute("INSERT OR IGNORE INTO help_requests (sender_id, in_conversation_with_admin) VALUES (?, 0)", (sender_id,))
+    conn.commit()
     cursor.execute("UPDATE help_requests SET in_conversation_with_admin = 1 WHERE sender_id = ?", (sender_id,))
     conn.commit()
-
+    time.sleep(10)
     if not admin_message["persona_id"]:
         admin_message["persona_id"] = chat.create_personas(
             'Admin', 
