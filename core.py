@@ -14,24 +14,21 @@ chat = Messenger()
 ai = AI()  # Crée une instance de la classe AI
 
 admin_id = Configuration.ADMIN_ID
-print(admin_id)
-try:
-    # Connexion à la base de données SQLite
-    conn = sqlite3.connect("help_requests.db", check_same_thread=False)
-    cursor = conn.cursor()
 
-    # Créer une table pour stocker les sender_id des utilisateurs demandant de l'aide
-    cursor.execute('''
-        CREATE TABLE IF NOT EXISTS help_requests (
-            id INTEGER PRIMARY KEY AUTOINCREMENT,
-            sender_id TEXT UNIQUE,
-            in_conversation_with_admin INTEGER DEFAULT 0
-        )
-    ''')
-    conn.commit()
-    
-except sqlite3.Error as e:
-    print(f"Erreur de connexion à la base de données : {e}")
+
+# Connexion à la base de données SQLite
+conn = sqlite3.connect("help_requests.db", check_same_thread=False)
+cursor = conn.cursor()
+
+# Créer une table pour stocker les sender_id des utilisateurs demandant de l'aide
+cursor.execute('''
+    CREATE TABLE IF NOT EXISTS help_requests (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        sender_id TEXT UNIQUE,
+        in_conversation_with_admin INTEGER DEFAULT 0
+    )
+''')
+conn.commit()
 
 # Dictionnaire pour stocker les messages de l'admin et le persona_id
 admin_message = {
