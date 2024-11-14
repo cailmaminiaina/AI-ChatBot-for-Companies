@@ -9,12 +9,12 @@ from utils.tool import correct_split
 import time
 import re
 
-# Initialize Messenger and AI
+# Initialiser Messenger et AI
 chat = Messenger()
 ai = AI()
 admin_id = Configuration.ADMIN_ID
 
-# Database connection setup with context management for efficient resource handling
+# Fonction pour initialiser la connexion à la base de données avec gestion du contexte pour optimiser l'utilisation des ressources
 def get_db_connection():
     conn = sqlite3.connect("help_requests.db", check_same_thread=False)
     conn.execute('''
@@ -29,10 +29,10 @@ def get_db_connection():
 
 conn = get_db_connection()
 
-# Dictionary for storing admin messages and persona_id
+# Dictionnaire pour stocker les messages de l'admin et le persona_id
 admin_message = {"messages": {}, "persona_id": None}
 
-# Extract and clean the user ID from the command
+# Fonction pour extraire et nettoyer l'ID de l'utilisateur du message
 def extract_user_id(cmd):
     if not cmd:
         return None, ""
@@ -41,32 +41,34 @@ def extract_user_id(cmd):
     cmd = re.sub(r'\b\d{13,20}\b', '', cmd).strip()
     return user_id, cmd or None
 
-# Helper function to check if user is in conversation with admin
+# Fonction pour vérifier si l'utilisateur est en conversation avec l'admin
 def is_in_conversation(sender_id):
     cursor = conn.execute("SELECT in_conversation_with_admin FROM help_requests WHERE sender_id = ?", (sender_id,))
     result = cursor.fetchone()
     return result and result[0] == 1
 
-# Helper function to send message from admin
+# Fonction d'aide pour envoyer un message de l'admin à un utilisateur cible
 def send_admin_msg(target_id, cmd):
     chat.send_text(target_id, cmd, persona_id=admin_message["persona_id"])
     chat.send_text(admin_id, f"Message envoyé à \n {target_id}")
 
-# Persistent menu setup
+# Configuration du menu persistant
 persistent_menu = [
     Button(type=Type.postback, title='📦 Faire une commande', payload=Payload('/command')),
     Button(type=Type.postback, title='👤 Personne Réelle', payload=Payload('/real')),
     Button(type=Type.postback, title='🤖 Assistant Virtuel IA', payload=Payload('/leave_admin')),
 ]
 
-# Main function handling commands
+# Fonction principale qui gère chaque commande de l'utilisateur
 @ampalibe.command('/')
 def main(sender_id, cmd, **ext):
     if sender_id == admin_id:
+        # Si l'admin envoie un message, extraire l'ID de l'utilisateur cible
         target_id, cmd = extract_user_id(cmd)
         if target_id:
             send_admin_msg(target_id, cmd)
         else:
+            # Si aucun ID cible n'est trouvé, envoyer le message à l'IA
             try:
                 chat_response = ai.get_chatgpt_response(sender_id, cmd)
                 chat.send_text(sender_id, chat_response)
@@ -74,9 +76,11 @@ def main(sender_id, cmd, **ext):
                 chat.send_text(sender_id, "Une erreur est survenue.")
                 print(f"Erreur : {e}")
     else:
+        # Si l'utilisateur est en conversation avec l'admin, envoyer le message à l'admin
         if is_in_conversation(sender_id):
             chat.send_text(admin_id, f"Message de l'utilisateur \n {sender_id} \n\n {cmd}")
         else:
+            # Sinon, envoyer la commande à l'IA
             chat.send_action(sender_id, Action.mark_seen)
             chat.send_action(sender_id, Action.typing_on)
             try:
@@ -88,7 +92,7 @@ def main(sender_id, cmd, **ext):
                 print(f"Erreur : {e}")
     chat.persistent_menu(sender_id, persistent_menu)
 
-# Real conversation mode
+# Commande pour basculer vers une conversation avec une personne réelle
 @ampalibe.command('/real')
 def send_real(sender_id, **ext):
     conn.execute("INSERT OR IGNORE INTO help_requests (sender_id, in_conversation_with_admin) VALUES (?, 0)", (sender_id,))
@@ -103,7 +107,7 @@ def send_real(sender_id, **ext):
     chat.send_text(admin_id, f"Cet utilisateur veut vous parler.")
     chat.send_text(admin_id, sender_id)
 
-# Order command handling
+# Commande pour traiter une demande de commande
 @ampalibe.command('/command')
 def commande(sender_id, **ext):
     conn.execute("INSERT OR IGNORE INTO help_requests (sender_id, in_conversation_with_admin) VALUES (?, 0)", (sender_id,))
@@ -120,20 +124,20 @@ def commande(sender_id, **ext):
     chat.send_text(admin_id, f"Cet utilisateur veut faire une commande.")
     chat.send_text(admin_id, sender_id)
 
-# Leave admin conversation mode
+# Commande pour quitter la conversation avec l'admin
 @ampalibe.command('/leave_admin')
 def leave_admin(sender_id, **ext):
     conn.execute("UPDATE help_requests SET in_conversation_with_admin = 0 WHERE sender_id = ?", (sender_id,))
     conn.commit()
     chat.send_text(sender_id, "Vous êtes maintenant de retour avec l'assistant virtuel IA 🤖.")
 
-# Reset conversation history
+# Commande pour réinitialiser l'historique de la conversation
 @ampalibe.command('/reset')
 def reset_conversation(sender_id, **ext):
     ai.reset_history(sender_id)
     chat.send_text(sender_id, "L'historique de la conversation a été réinitialisé.")
 
-# Close resources
+# Fonction pour fermer les connexions et libérer les ressources
 def close():
     try:
         ai.close()
