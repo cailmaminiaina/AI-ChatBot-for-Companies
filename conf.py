@@ -7,6 +7,8 @@ class Configuration:
         Takes the default value if not defined.
     '''
     ADAPTER = env.get('ADAPTER')
+    
+    ADMIN_ID = env.get('ADMIN_ID')
 
     API_KEY = env.get('API_KEY')
     
