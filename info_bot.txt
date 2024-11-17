@@ -1,1 +1,51 @@
-Add all of your Company's Informations here ...
+{
+  "entreprise": {
+    "nom": "Haute Zone Madagascar",
+    "slogan": "Louez votre boitier WiFi.",
+    "secteur_activite": "Location wifi, Vente de produits réseau-électroniques ",
+    "coordonnees": {
+      "adresse": "Ankorahotra (en face de la pharmacie Hanitra), Ankadifotsy (en face de l'ISCAM), Ivato (Mandrosoa Ivato, en face de l'hotel Pousse Pousse du Raphia), Itaosy (Horizon, en face de l'AJESAIA), Majunga, Tamatave",
+      "telephone": "+261320370086",
+      "email": "contact@haute-zonewifi.mg",
+      "site_web": "www.haute-zonewifi.mg",
+      "reseaux_sociaux": {
+        "facebook": "facebook.com/HauteZoneMadagascar",
+        "instagram": "@hautezonewifi",
+      }
+    },
+    "description": "Haute ZOne est une entreprise spécialisée dans la location wifi et la vente de produits réseaux-électroniques...",
+    "horaires_ouverture": {
+      "lundi_vendredi": "8h00 - 16h00",
+      "samedi": "8h00 - 12h00",
+      "dimanche": "Fermé"
+    },
+    "Partenaire": {"Orange Madagascar (FAI)"},
+    "produits_services": {
+      "location": ["WiFi Journalier et Mensuel", "à partir de 8 000 Ar / jour si 15 jours et plus sinon 10 000 Ar / jour"],
+      "produits": ["FlyBox B622 (300 000 Ar avec internet illimité 30j)", "Repeteurs et recepteur WiFi", "Cable et Boitier smartphone", "Onduleur et Powerbank", "Accessoires informatiques"],
+      "services": ["Assistance technique", "Livraison à domicile", "Support client 24/7", "Garantie"]
+    },
+    "conditions_vente": {
+      "politique_retour": "Retour possible sous 24 h avec preuve d'achat.",
+      "modes_paiement": ["Carte de crédit", "Cash", "Virements bancaires", "Paiement à la livraison"],
+      "conditions_garantie": "Garantie de 30 jours minimum sur tous les produits électroniques."
+    },
+    "equipe_direction": {
+      "directeur_general": "M. Avo Andriarinavalona, +261320370084 (CONFIDENTIEL)",
+      "directrice_marketing": "Mme Rouva Gaelle, +261320370085",
+      "responsable_administratif": "Mme Hasina Andria, +261320370086",
+      "responsable_service_client": "Mme Rouva Gaelle, +261320370085",
+      "responsable_service_technique": "M. Fenosoa Razakarimanana, +261 32 03 700 94"
+    },
+    "statistiques_cles": {
+      "annee_fondation": 2017,
+      "nombre_employes": 15,
+      "chiffre_affaires_annuel": "5 milliards Ariary"
+    },
+    "avis_clients": {
+      "note_moyenne": 4.5,
+      "nombre_avis": 1200,
+      "commentaires_frequents": ["Service rapide et efficace", "Produits de qualité", "Support client très réactif"]
+    }
+  }
+}
