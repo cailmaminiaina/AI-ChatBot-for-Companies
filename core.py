@@ -29,8 +29,13 @@ def get_db_connection():
 
 conn = get_db_connection()
 
+
+
 # Dictionnaire pour stocker les messages de l'admin et le persona_id
-admin_message = {"messages": {}, "persona_id": None}
+admin_message = {"messages": {}, "persona_id": chat.create_personas(
+            'Caïl Maminiaina', 
+            'https://scontent.ftnr4-2.fna.fbcdn.net/v/t39.30808-6/465660014_1141614417637034_6935864442709890384_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeEkrQvNFLsk6jWvDfvjOKs7DHFpC1zSS4AMcWkLXNJLgHyYpiY_zHF2CiESoYkdqSg8N9DHQqjERl80A3zv5luS&_nc_ohc=DgmCz6fL_YQQ7kNvgFxYGUE&_nc_pt=1&_nc_zt=23&_nc_ht=scontent.ftnr4-2.fna&_nc_gid=ARqZlGInPizLHcMh2Zdf-ut&oh=00_AYCgORb-wAErpdZn1HCfVXAjVAK4iiuncDxNrohv8K5G4w&oe=673F9F4C'
+        )}
 
 # Fonction pour extraire et nettoyer l'ID de l'utilisateur du message
 def extract_user_id(cmd):
@@ -50,7 +55,7 @@ def is_in_conversation(sender_id):
 # Fonction d'aide pour envoyer un message de l'admin à un utilisateur cible
 def send_admin_msg(target_id, cmd):
     chat.send_text(target_id, cmd, persona_id=admin_message["persona_id"])
-    chat.send_text(admin_id, f"Message envoyé à \n {target_id}")
+    chat.send_text(admin_id, f"Message envoyé à l'utilisateur, \n ID: {target_id}")
 
 # Configuration du menu persistant
 persistent_menu = [
@@ -66,6 +71,8 @@ def main(sender_id, cmd, **ext):
         # Si l'admin envoie un message, extraire l'ID de l'utilisateur cible
         target_id, cmd = extract_user_id(cmd)
         if target_id:
+            chat.send_action(target_id, Action.mark_seen)
+            chat.send_action(target_id, Action.typing_on)
             send_admin_msg(target_id, cmd)
         else:
             # Si aucun ID cible n'est trouvé, envoyer le message à l'IA
@@ -78,7 +85,7 @@ def main(sender_id, cmd, **ext):
     else:
         # Si l'utilisateur est en conversation avec l'admin, envoyer le message à l'admin
         if is_in_conversation(sender_id):
-            chat.send_text(admin_id, f"Message de l'utilisateur \n {sender_id} \n\n {cmd}")
+            chat.send_text(admin_id, f"Message de l'utilisateur, \n ID: {sender_id} \n Conetnu: {cmd}")
         else:
             # Sinon, envoyer la commande à l'IA
             chat.send_action(sender_id, Action.mark_seen)
@@ -98,13 +105,13 @@ def send_real(sender_id, **ext):
     conn.execute("INSERT OR IGNORE INTO help_requests (sender_id, in_conversation_with_admin) VALUES (?, 0)", (sender_id,))
     conn.execute("UPDATE help_requests SET in_conversation_with_admin = 1 WHERE sender_id = ?", (sender_id,))
     conn.commit()
-
-    if not admin_message["persona_id"]:
-        admin_message["persona_id"] = chat.create_personas(
-            'Admin', 
-            'https://img.freepik.com/photos-premium/portrait-jeune-homme-affaires-africain-cheveux-afro-costume-contre-mur-blanc_251136-74554.jpg?semt=ais_hybrid'
-        )
-    chat.send_text(admin_id, f"Cet utilisateur veut vous parler.")
+    
+    chat.send_action(sender_id, Action.mark_seen)
+    chat.send_action(sender_id, Action.typing_on)
+    
+    chat.send_text(sender_id, "Un de nos personnels va vous répondre, veuillez patienter svp ! :D")
+    
+    chat.send_text(admin_id, f"Un utilisateur veut vous parler. \n ID:")
     chat.send_text(admin_id, sender_id)
 
 # Commande pour traiter une demande de commande
@@ -113,15 +120,13 @@ def commande(sender_id, **ext):
     conn.execute("INSERT OR IGNORE INTO help_requests (sender_id, in_conversation_with_admin) VALUES (?, 0)", (sender_id,))
     conn.execute("UPDATE help_requests SET in_conversation_with_admin = 1 WHERE sender_id = ?", (sender_id,))
     conn.commit()
-
-    if not admin_message["persona_id"]:
-        admin_message["persona_id"] = chat.create_personas(
-            'Admin', 
-            'https://img.freepik.com/photos-premium/portrait-jeune-homme-affaires-africain-cheveux-afro-costume-contre-mur-blanc_251136-74554.jpg?semt=ais_hybrid'
-        )
-    time.sleep(10)
-    chat.send_text(sender_id, "Bonjour, quelle est votre commande svp ?", persona_id=admin_message["persona_id"])
-    chat.send_text(admin_id, f"Cet utilisateur veut faire une commande.")
+    
+    chat.send_action(sender_id, Action.mark_seen)
+    chat.send_action(sender_id, Action.typing_on)
+    
+    chat.send_text(sender_id, "Un de nos personnels va prendre vos commandes, veuillez patienter svp ! :D")
+    
+    chat.send_text(admin_id, f"Un utilisateur veut faire une commande. \n ID:")
     chat.send_text(admin_id, sender_id)
 
 # Commande pour quitter la conversation avec l'admin
@@ -129,6 +134,9 @@ def commande(sender_id, **ext):
 def leave_admin(sender_id, **ext):
     conn.execute("UPDATE help_requests SET in_conversation_with_admin = 0 WHERE sender_id = ?", (sender_id,))
     conn.commit()
+    
+    chat.send_action(sender_id, Action.mark_seen)
+    chat.send_action(sender_id, Action.typing_on)
     chat.send_text(sender_id, "Vous êtes maintenant de retour avec l'assistant virtuel IA 🤖.")
 
 # Commande pour réinitialiser l'historique de la conversation
