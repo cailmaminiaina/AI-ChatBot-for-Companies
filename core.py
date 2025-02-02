@@ -67,8 +67,8 @@ persistent_menu = [
 # Fonction principale qui gère chaque commande de l'utilisateur
 @ampalibe.command('/')
 def main(sender_id, cmd, **ext):
-    chat.send_action(target_id, Action.mark_seen)
-    chat.send_action(target_id, Action.typing_on)
+    chat.send_action(sender_id, Action.mark_seen)
+    chat.send_action(sender_id, Action.typing_on)
     if sender_id == admin_id:
         # Si l'admin envoie un message, extraire l'ID de l'utilisateur cible
         target_id, cmd = extract_user_id(cmd)
