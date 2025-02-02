@@ -34,7 +34,7 @@ conn = get_db_connection()
 # Dictionnaire pour stocker les messages de l'admin et le persona_id
 admin_message = {"messages": {}, "persona_id": chat.create_personas(
             'Caïl Maminiaina', 
-            'https://scontent.ftnr4-2.fna.fbcdn.net/v/t39.30808-6/465660014_1141614417637034_6935864442709890384_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeEkrQvNFLsk6jWvDfvjOKs7DHFpC1zSS4AMcWkLXNJLgHyYpiY_zHF2CiESoYkdqSg8N9DHQqjERl80A3zv5luS&_nc_ohc=DgmCz6fL_YQQ7kNvgFxYGUE&_nc_pt=1&_nc_zt=23&_nc_ht=scontent.ftnr4-2.fna&_nc_gid=ARqZlGInPizLHcMh2Zdf-ut&oh=00_AYCgORb-wAErpdZn1HCfVXAjVAK4iiuncDxNrohv8K5G4w&oe=673F9F4C'
+            'https://scontent.ftnr4-2.fna.fbcdn.net/v/t39.30808-6/471263936_1172912754507200_2637583807407425950_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=a5f93a&_nc_eui2=AeH2Bw5RGqyegJ-HFpTruBP__YGsRMFeNor9gaxEwV42iqJ4uGWDhcPatfTI_pSOGxBwOGNT1G03Z4KtZ5WjFW5k&_nc_ohc=_cBIjrtJr4oQ7kNvgFgemd8&_nc_pt=1&_nc_zt=23&_nc_ht=scontent.ftnr4-2.fna&_nc_gid=AqzHpklydAsDydLkPeZsEQJ&oh=00_AYAlnuxzE8X3z7lMhi3dfiDsLLWCfGf85-t6T9EVfmGdXA&oe=67A51D67'
         )}
 
 # Fonction pour extraire et nettoyer l'ID de l'utilisateur du message
@@ -67,12 +67,12 @@ persistent_menu = [
 # Fonction principale qui gère chaque commande de l'utilisateur
 @ampalibe.command('/')
 def main(sender_id, cmd, **ext):
+    chat.send_action(target_id, Action.mark_seen)
+    chat.send_action(target_id, Action.typing_on)
     if sender_id == admin_id:
         # Si l'admin envoie un message, extraire l'ID de l'utilisateur cible
         target_id, cmd = extract_user_id(cmd)
         if target_id:
-            chat.send_action(target_id, Action.mark_seen)
-            chat.send_action(target_id, Action.typing_on)
             send_admin_msg(target_id, cmd)
         else:
             # Si aucun ID cible n'est trouvé, envoyer le message à l'IA
@@ -88,8 +88,6 @@ def main(sender_id, cmd, **ext):
             chat.send_text(admin_id, f"Message de l'utilisateur, \n ID: {sender_id} \n Conetnu: {cmd}")
         else:
             # Sinon, envoyer la commande à l'IA
-            chat.send_action(sender_id, Action.mark_seen)
-            chat.send_action(sender_id, Action.typing_on)
             try:
                 responses = correct_split(ai.get_chatgpt_response(sender_id, cmd))
                 for response in responses:
