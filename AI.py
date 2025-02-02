@@ -4,7 +4,7 @@ from conf import Configuration
 
 API_KEY = Configuration.API_KEY
 openai.api_key = API_KEY
-openai.base_url = "https://api.pawan.krd/v1/"
+openai.base_url = "https://api.pawan.krd/cosmosrp-pro-it/v1/"
 
 class AI:
     def __init__(self):
