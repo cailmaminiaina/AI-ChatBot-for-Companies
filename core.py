@@ -67,7 +67,6 @@ persistent_menu = [
 # Fonction principale qui gère chaque commande de l'utilisateur
 @ampalibe.command('/')
 def main(sender_id, cmd, **ext):
-    chat.persistent_menu(sender_id, persistent_menu)
     chat.send_action(sender_id, Action.mark_seen)
     chat.send_action(sender_id, Action.typing_on)
     if sender_id == admin_id:
@@ -96,6 +95,7 @@ def main(sender_id, cmd, **ext):
             except Exception as e:
                 chat.send_text(sender_id, "Une erreur est survenue.")
                 print(f"Erreur : {e}")
+    chat.persistent_menu(sender_id, persistent_menu)
 
 # Commande pour basculer vers une conversation avec une personne réelle
 @ampalibe.command('/real')
