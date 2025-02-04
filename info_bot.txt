@@ -1,11 +1,11 @@
 {
   "entreprise": {
     "nom": "Haute Zone Madagascar",
-    "slogan": "Louez votre boitier WiFi.",
+    "slogan": "Louez votre boitier WiFi, illimité sans FUP et sans engagement.",
     "secteur_activite": "Location wifi, Vente de produits réseau-électroniques ",
     "coordonnees": {
       "adresse": "Ankorahotra (en face de la pharmacie Hanitra), Ankadifotsy (en face de l'ISCAM), Ivato (Mandrosoa Ivato, en face de l'hotel Pousse Pousse du Raphia), Itaosy (Horizon, en face de l'AJESAIA), Majunga, Tamatave",
-      "telephone": "+261320370086",
+      "telephones": "Ankorahotra : +261320370088 (Mme Ravaka), Ankadifotsy : +261320370086 (Mme Hasina), Ivato : +261320370095 (Mme Christelle), Itaosy : +261320370099 (Mme Nadia), Majunga : +261320370096 (Mme Josia), Tamatave : +261320370098 (Mme Narindra)",
       "email": "contact@haute-zonewifi.mg",
       "site_web": "www.haute-zonewifi.mg",
       "reseaux_sociaux": {
@@ -13,7 +13,7 @@
         "instagram": "@hautezonewifi",
       }
     },
-    "description": "Haute ZOne est une entreprise spécialisée dans la location wifi et la vente de produits réseaux-électroniques...",
+    "description": "Haute Zone est une entreprise spécialisée dans la location wifi et la vente de produits réseaux-électroniques...",
     "horaires_ouverture": {
       "lundi_vendredi": "8h00 - 16h00",
       "samedi": "8h00 - 12h00",
@@ -21,9 +21,10 @@
     },
     "Partenaire": {"Orange Madagascar (FAI)"},
     "produits_services": {
-      "location": ["WiFi Journalier et Mensuel", "à partir de 8 000 Ar / jour si 15 jours et plus sinon 10 000 Ar / jour"],
-      "produits": ["FlyBox B622 (300 000 Ar avec internet illimité 30j)", "Repeteurs et recepteur WiFi", "Cable et Boitier smartphone", "Onduleur et Powerbank", "Accessoires informatiques"],
+      "location": ["WiFi Journalier et Mensuel (sans engagement et illimité)", "à partir de 8 000 Ar / jour si 30 jours, 9 000 Ar / jour pour 15 jours et 10 000 Ar / jour pour 7 jours (Ces offres tarifs sont sans matériels). La carte SIM est obligatoire à 5 000 Ar avec un bonus 10GB de Data."],
+      "produits": ["FlyBox B622 (300 000 Ar avec internet illimité 30j)", "Domino 4G (150 000 Ar), "Repeteurs et recepteur WiFi", "Cable et Boitier smartphone", "Onduleur et Powerbank", "Accessoires informatiques"],
       "services": ["Assistance technique", "Livraison à domicile", "Support client 24/7", "Garantie"]
+      "nouveau": ["Offre Loisir", "Data WiFi 30 Jours (80GB à 159 000 Ar)"]
     },
     "conditions_vente": {
       "politique_retour": "Retour possible sous 24 h avec preuve d'achat.",
@@ -39,8 +40,8 @@
     },
     "statistiques_cles": {
       "annee_fondation": 2017,
-      "nombre_employes": 15,
-      "chiffre_affaires_annuel": "5 milliards Ariary"
+      "nombre_employes": 15 "(CONFIDENTIEL)",
+      "chiffre_affaires_annuel": "5 milliards Ariary (CONFIDENTIEL)"
     },
     "avis_clients": {
       "note_moyenne": 4.5,
