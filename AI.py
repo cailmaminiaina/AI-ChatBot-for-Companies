@@ -64,10 +64,10 @@ class AI:
             self.add_message(sender_id, "user", user_message)
             
             response = openai.chat.completions.create(
-                model="pai-001-rp",
+                model="cosmosrp-pro",
                 #max_tokens= 100,
                 #stop=["\n"],
-                temperature=0.9,
+                temperature=0.7,
                 messages=self.get_conversation_history(sender_id)
             )
 
