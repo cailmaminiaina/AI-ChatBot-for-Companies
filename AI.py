@@ -4,7 +4,7 @@ from conf import Configuration
 
 API_KEY = Configuration.API_KEY
 openai.api_key = API_KEY
-openai.base_url = "https://api.pawan.krd/cosmosrp-pro/v1/"
+openai.base_url = "https://api.pawan.krd/cosmosrp/v1/"
 
 class AI:
     def __init__(self):
@@ -64,7 +64,7 @@ class AI:
             self.add_message(sender_id, "user", user_message)
             
             response = openai.chat.completions.create(
-                model="cosmosrp-pro",
+                model="cosmosrp",
                 #max_tokens= 100,
                 #stop=["\n"],
                 temperature=0.7,
