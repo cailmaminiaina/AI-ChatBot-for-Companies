@@ -114,7 +114,7 @@ Use ngrok to expose the local server for testing.
 
 Developed by: **Cail Maminiiana**
 
-[GitHub](https://github.com/maminiainalaic) | [Facebook](https://facebook.com/maminaina.cail)
+[GitHub](https://github.com/maminiainalaic) | [Facebook](https://facebook.com/maminiaina.cail)
 
 Contributor: **Pawan Osman**
 
@@ -124,4 +124,5 @@ If you find this project useful, consider buying me a coffee!
 
 ![Status](https://img.shields.io/badge/TaptapSend-darkgreen)
 
-    +261341820966 or +261324903869
+    +261341820966
+    +261324903869
